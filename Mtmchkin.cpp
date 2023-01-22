@@ -144,13 +144,14 @@ void Mtmchkin::createPlayers()
 void Mtmchkin::createDeck(const string &fileName)
 {
     ifstream sorce(fileName);
-    if (!sorce) {
+    if (!sorce)
+    {
         throw DeckFileNotFound();
     }
-    int numOfCards = 0;
-    int lineNum = 1;
+    int numOfCards =0, lineNum = 1;
     string className;
-    while (std::getline(sorce, className)) {
+    while (std::getline(sorce, className))
+    {
         if (!CARD_TYPES.count(className)) {
             m_activePlayers.clear();
             m_deckOfCards.clear();
@@ -224,7 +225,7 @@ void Mtmchkin::createEmptyGroup()
 
 
 
-bool Mtmchkin::isValidNumber(std::string& number)
+bool Mtmchkin::isValidNumber(const std::string& number)
 {
     if(number==BACK_SPACE)
     {
@@ -245,7 +246,7 @@ bool Mtmchkin::isValidNumber(std::string& number)
 
 
 
-bool Mtmchkin::isValidPlayer(std::string& name,std::string& job)
+bool Mtmchkin::isValidPlayer(const std::string& name,const std::string& job)
 {
    if(name.size()>MAX_NAME_LENGTH || !(name.find_first_not_of(LETTERS) == string::npos))
    {

@@ -192,7 +192,7 @@ bool dragonDenTest()
     const string tmp_file("dragonDen_test");
     string input("2\nJimmy Healer\nPikachu Warrior");
     string deck("Dragon\nDragon\nDragon\nDragon\nDragon");
-    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\tests\\dragonDen_test_expected.txt");
+    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\tests\\dragonDen_test_expected.txt");
     return GeneralGameSimulationTest(tmp_file, input, deck, expectedOutputFilename);
 }
 
@@ -201,7 +201,7 @@ bool witchLairTest()
     const string tmp_file("witchLair_test");
     string input("2\nItay Warrior\nPikachu Ninja");
     string deck("Witch\nWitch\nWitch\nWitch\nWitch");
-    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\tests\\witchLair_test_expected.txt");
+    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\tests\\witchLair_test_expected.txt");
     return GeneralGameSimulationTest(tmp_file, input, deck, expectedOutputFilename);
 }
 
@@ -210,7 +210,7 @@ bool gremlinCaveTest()
     const string tmp_file("gremlinCave_test");
     string input("2\nItay Healer\nPikachu Ninja");
     string deck("Gremlin\nGremlin\nGremlin\nGremlin\nGremlin");
-    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\tests\\gremlinCave_test_expected.txt");
+    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\tests\\gremlinCave_test_expected.txt");
     return GeneralGameSimulationTest(tmp_file, input, deck, expectedOutputFilename);
 }
 
@@ -219,7 +219,7 @@ bool nonMostersTest()
     const string tmp_file("noMonster_test");
     string input("2\nItay Healer\nPikachu Ninja");
     string deck("Mana\nBarfight\nWell\nTreasure\nMana");
-    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\tests\\noMonster_test_expected.txt");
+    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\tests\\noMonster_test_expected.txt");
     return GeneralGameSimulationTest(tmp_file, input, deck, expectedOutputFilename);
 }
 
@@ -228,7 +228,7 @@ bool roundLimitTest()
     const string tmp_file("roundLimit_test");
     string input("2\nmatamDalf Healer\nrocky Warrior");
     string deck("Mana\nMana\nMana\nMana\nMana");
-    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\tests\\roundLimit_test_expected.txt");
+    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\tests\\roundLimit_test_expected.txt");
     return GeneralGameSimulationTest(tmp_file, input, deck, expectedOutputFilename);
 }
 
@@ -237,7 +237,7 @@ bool allTenTest()
     const string tmp_file("allTen_test");
     string input("2\nmatamDalf Healer\nrocky Warrior");
     string deck("Gremlin\nGremlin\nGremlin\nGremlin\nGremlin");
-    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\tests\\allTen_test_expected.txt");
+    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\tests\\allTen_test_expected.txt");
     return GeneralGameSimulationTest(tmp_file, input, deck, expectedOutputFilename);
 }
 
@@ -246,7 +246,7 @@ bool badPlayerInputTest()
     const string tmp_file("badPlayerInput_test");
     string input("2\nmatamDalf Healerd\nmatamDalf ninha\nmatamDalf Healer\nrocky Warrior");
     string deck("Gremlin\nWitch\nGremlin\nGremlin\nDragon");
-    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\tests\\badPlayerInput_test_expected.txt");
+    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\tests\\badPlayerInput_test_expected.txt");
     return GeneralGameSimulationTest(tmp_file, input, deck, expectedOutputFilename);
 }
 
@@ -260,7 +260,7 @@ bool merchantInputTest()
                  "2\n"
                  "0\n");
     string deck("Gremlin\nGremlin\nMerchant\nMerchant\nDragon");
-    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\tests\\merchantInput_test_expected.txt");
+    string expectedOutputFilename("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\tests\\merchantInput_test_expected.txt");
     return GeneralGameSimulationTest(tmp_file, input, deck, expectedOutputFilename);
 }
 
@@ -275,7 +275,7 @@ bool badSizeTest()
     string expectedOutputFilename("notneeded.txt");
 	bool flag= false;
     try{
-        Mtmchkin("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\inputs\\empty.txt");
+        Mtmchkin("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\inputs\\empty.txt");
     }
     catch(const DeckFileInvalidSize& e){
         flag = true;
@@ -291,7 +291,7 @@ bool noFileTest()
     string deck("This_is_not_the_file_your_looking_for");
     bool flag = false;
     try{
-        Mtmchkin("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\inputs\\noFile.txt");
+        Mtmchkin("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\inputs\\noFile.txt");
     }
     catch(const DeckFileNotFound& e){
         flag=true;
@@ -307,7 +307,7 @@ bool badFormatTest()
     string expectedOutputFilename("notneeded.txt");
     bool flag = false;
     try {
-        Mtmchkin("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\inputs\\badFormat_test.txt");
+        Mtmchkin("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\inputs\\badFormat_test.txt");
     }
     catch(const DeckFileFormatError& e){
         if(strcmp(e.what(),"Deck File Error: File format error in line 2")==0) {
@@ -325,7 +325,7 @@ bool badFormatStartTest()
     string expectedOutputFilename("notneeded.txt");
     bool flag = false;
     try {
-        Mtmchkin("C:\\Users\\nrhbv\\OneDrive\\Desktop\\matam\\ex4-main\\inputs\\badFormat_test_start_of_file.txt");
+        Mtmchkin("C:\\Users\\nrhbv\\OneDrive\\Desktop\\hw4\\finishedHw4\\inputs\\badFormat_test_start_of_file.txt");
     }
     catch(const DeckFileFormatError& e){
         const char* msg=e.what();
@@ -360,4 +360,5 @@ int main(){
 
     return 0;
 }
+
 */

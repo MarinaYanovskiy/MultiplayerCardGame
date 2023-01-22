@@ -124,7 +124,7 @@ private:
     *         True- if the data is legal.
      *         False otherwise.
     */
-    static bool isValidNumber(std::string& number);
+    static bool isValidNumber(const std::string& number);
 
 
 
@@ -135,7 +135,7 @@ private:
     *         True- if the data is legal.
      *         False otherwise.
     */
-    static bool isValidPlayer(std::string& name,std::string& job);
+    static bool isValidPlayer(const std::string& name,const std::string& job);
 
 
 
