@@ -15,7 +15,7 @@ public:
     * @return
     *      A new instance of Dragon.
     */
-    Dragon()=default;
+    Dragon();
 
 
 
@@ -29,15 +29,6 @@ public:
 
 
 
-    /*
-    * Get the card type
-    *
-    * @return
-    *      the type of the card ("Dragon").
-    */
-    std::string getType() const override;
-
-
 private:
     /*
      * Hande the player if he lost in the battle.
@@ -48,41 +39,6 @@ private:
     void handlePlayerLoss(Player &player) const override;
 
 
-
-
-    /*
-    * Get the card attack force
-    *
-    * @return
-    *      attack force.
-    */
-    virtual int getForce() const override;
-
-
-
-    /*
-    * Get the card coins prize
-    *
-    * @return
-    *      the coins prize for winning.
-    */
-    virtual int getCoins() const override;
-
-
-
-    /*
-    * Get the card damage force
-    *
-    * @return
-    *      the damage force.
-    */
-    virtual int getDamage() const override;
-
-
-
-    static const int DRAGON_COINS = 1000;
-    static const int DRAGON_FORCE = 25;
-    static const int DRAGON_DAMAGE = -1;
 };
 
 

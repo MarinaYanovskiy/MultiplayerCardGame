@@ -15,7 +15,7 @@ public:
     * @return
     *      A new instance of Barfight.
     */
-    Barfight()=default;
+    Barfight();
 
 
 
@@ -39,13 +39,7 @@ public:
     void applyEncounter(Player &player) const override;
 
 
-    /*
-    * Get the card type
-    *
-    * @return
-    *      the type of the card ("Barfight").
-    */
-    std::string getType() const override;
+
 
 private:
     static const int BAR_FIGHT_DAMAGE = 10;

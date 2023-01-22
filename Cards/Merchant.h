@@ -15,7 +15,7 @@ public:
     * @return
     *      A new instance of Merchant
     */
-    Merchant()=default;
+    Merchant();
 
 
 
@@ -40,15 +40,6 @@ public:
 
 
 
-    /*
-    * Get the card type
-    *
-    * @return
-    *      the type of the card ("Merchant").
-    */
-    std::string getType() const override;
-
-
 
 private:
 
@@ -62,7 +53,7 @@ private:
     *       true - if legal input was entered.
     *      else otherwise.
     */
-    static bool isValidInput(std::string str);
+    static bool isValidInput(const std::string& input);
 
 
 

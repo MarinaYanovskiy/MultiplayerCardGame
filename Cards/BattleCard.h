@@ -17,7 +17,7 @@ public:
     * @return
     *      A new instance of BattleCard.
     */
-    BattleCard()=default;
+    BattleCard(const std::string& name, int damage, int force, int coins);
 
 
 
@@ -43,13 +43,6 @@ public:
 
 
 
-    /*
-    * Get the card type
-    *
-    * @return
-    *      the type of the card.
-    */
-    virtual std::string getType() const=0;
 
 
 protected:
@@ -64,36 +57,6 @@ protected:
 
 
 
-    /*
-    * Get the card attack force
-    *
-    * @return
-    *      attack force.
-    */
-    virtual int getForce() const=0;
-
-
-
-    /*
-    * Get the card coins prize
-    *
-    * @return
-    *      the coins prize for winning.
-    */
-    virtual int getCoins() const=0;
-
-
-
-
-    /*
-    * Get the card damage force
-    *
-    * @return
-    *      the damage force.
-    */
-    virtual int getDamage() const=0;
-
-
 private:
     /*
      * Prints additional card info if exists (for example- for special cards).
@@ -102,6 +65,12 @@ private:
      *      void
     */
    void printAdditionalInfo(std::ostream &stream) const override;
+
+
+protected:
+    int m_damage;
+    int m_force;
+    int m_coins;
 };
 
 

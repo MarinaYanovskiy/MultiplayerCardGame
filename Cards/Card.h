@@ -19,7 +19,7 @@ public:
     * @return
     *      A new instance of Card.
     */
-    Card()=default;
+    Card(const std::string& name);
 
 
 
@@ -58,7 +58,7 @@ public:
     * @return
     *      the type of the card.
     */
-    virtual std::string getType() const=0;
+  //  virtual std::string getType() const=0;
 
 
 
@@ -72,8 +72,6 @@ public:
     friend std::ostream &operator<<(std::ostream &stream, const Card &);
 
 protected:
-
-
     /*
      * Prints additional card info if exists (for example- for special cards).
      *
@@ -81,6 +79,9 @@ protected:
      *      void
     */
     virtual void printAdditionalInfo(std::ostream &stream) const;
+
+
+    std::string m_name;
 
 };
 

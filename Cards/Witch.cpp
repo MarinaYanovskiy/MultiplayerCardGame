@@ -3,41 +3,23 @@
 //
 
 #include "Witch.h"
+#define WITCH_COINS 2
+#define WITCH_FORCE 11
+#define WITCH_DAMAGE 10
+#define WITCH_FORCE_LOSS 1
+
+Witch::Witch():
+        BattleCard("Witch",WITCH_DAMAGE,WITCH_FORCE,WITCH_COINS)
+
+{}
+
+
 
 void Witch::handlePlayerLoss(Player &player) const
 {
-    player.damage(WITCH_DAMAGE);
+    player.damage(m_damage);
     player.weaken(WITCH_FORCE_LOSS);
 }
-
-
-
-std::string Witch::getType() const
-{
-    return "Witch";
-}
-
-
-
-int Witch::getForce() const
-{
-    return WITCH_FORCE;
-}
-
-
-
-int Witch::getCoins() const
-{
-    return WITCH_COINS;
-}
-
-
-
-int Witch::getDamage() const
-{
-    return WITCH_DAMAGE;
-}
-
 
 
 std::unique_ptr<Card> createWitch()

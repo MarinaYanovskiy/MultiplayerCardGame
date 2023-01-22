@@ -34,7 +34,7 @@ void Ninja::addCoins(int coinsToAdd)
 
 
 
-std::string Ninja::getJob() const
+const std::string& Ninja::getJob() const
 {
     return m_job;
 }

@@ -3,33 +3,12 @@
 //
 
 #include "Dragon.h"
+#define DRAGON_COINS  1000
+#define DRAGON_FORCE 25
 
-std::string Dragon::getType() const
-{
-    return "Dragon";
-}
-
-
-
-int Dragon::getForce() const
-{
-    return DRAGON_FORCE;
-}
-
-
-
-int Dragon::getCoins() const
-{
-    return DRAGON_COINS;
-}
-
-
-
-int Dragon::getDamage() const
-{
-    return DRAGON_DAMAGE;
-}
-
+Dragon::Dragon():
+        BattleCard("Dragon", DEFAULT_MAX_HP,DRAGON_FORCE,DRAGON_COINS)
+{}
 
 
 std::unique_ptr<Card> createDragon()

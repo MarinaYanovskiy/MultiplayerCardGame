@@ -15,7 +15,7 @@ public:
     * @return
     *      A new instance of Mana.
     */
-    Mana()=default;
+    Mana();
 
 
 
@@ -40,13 +40,6 @@ public:
 
 
 
-    /*
-    * Get the card type
-    *
-    * @return
-    *      the type of the card ("Mana").
-    */
-    std::string getType() const override;
 
 private:
     static const int MANA_HP_INCREASE = 10;

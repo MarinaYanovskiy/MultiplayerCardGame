@@ -3,11 +3,9 @@
 //
 
 #include "Merchant.h"
-
-std::string Merchant::getType() const
-{
-    return "Merchant";
-}
+Merchant::Merchant():
+        Card("Merchant")
+{}
 
 
 
@@ -18,11 +16,11 @@ void Merchant::applyEncounter(Player &player) const
 
     while (true)
     {
-        std::string str;
-        getline(std::cin, str);
-        if(isValidInput(str))
+        std::string input;
+        getline(std::cin, input);
+        if(isValidInput(input))
         {
-            userInput= std::stoi(str);
+            userInput= std::stoi(input);
             break;
         }
         printInvalidInput();
@@ -59,23 +57,20 @@ void Merchant::applyEncounter(Player &player) const
 
 
 
-bool Merchant::isValidInput(std::string str)
+bool Merchant::isValidInput(const std::string& input)
 {
-    if (str.length() == 1)
+    if (input.length() == 1)
     {
         try
         {
             std::size_t pos;
-            int userInput = std::stoi(str, &pos);
+            int userInput = std::stoi(input, &pos);
             if (userInput == LEAVE_CMD || userInput == HEALTH_POTION_CMD || userInput == FORCE_BOOST_CMD)
             {
                 return true;
             }
         }
-        catch (const std::invalid_argument &ex)
-        {
-        }
-        catch (const std::out_of_range &ex)
+        catch (...)
         {
         }
     }
@@ -86,7 +81,7 @@ bool Merchant::isValidInput(std::string str)
 
 std::unique_ptr<Card> createMerchant()
 {
-    Merchant* merPtr=new Merchant();
-    std::unique_ptr<Card> merchant(merPtr);
+    Merchant* merchantPtr=new Merchant();
+    std::unique_ptr<Card> merchant(merchantPtr);
     return merchant;
 }

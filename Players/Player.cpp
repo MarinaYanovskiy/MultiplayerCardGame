@@ -9,7 +9,7 @@ using namespace std;
 
 
 //--------------------c'tor, copy-c'tor------------------
-Player::Player(const string name) :
+Player::Player(const string& name) :
     m_name(name),
     m_level(LEVEL_ONE),
     m_force(DEFAULT_FORCE),

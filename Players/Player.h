@@ -23,7 +23,7 @@ class Player
      * @result
      *      An instance of Player
     */
-    Player(const std::string name);
+    Player(const std::string& name);
 
 
 
@@ -98,7 +98,7 @@ class Player
      *      the job (type) of a player.
     */
 
-    virtual std::string getJob() const = 0;
+    virtual const std::string& getJob() const = 0;
 
 
 

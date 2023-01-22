@@ -15,7 +15,7 @@ public:
     * @return
     *      A new instance of Treasure.
     */
-    Treasure()=default;
+    Treasure();
 
 
 
@@ -38,15 +38,6 @@ public:
     */
     void applyEncounter(Player &player) const override;
 
-
-
-    /*
-    * Get the card type
-    *
-    * @return
-    *      the type of the card ("Treasure").
-    */
-    std::string getType() const override;
 
 private:
     static const int TREASURE = 10;

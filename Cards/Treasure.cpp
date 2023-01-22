@@ -3,11 +3,9 @@
 //
 
 #include "Treasure.h"
-
-std::string Treasure::getType() const
-{
-    return "Treasure";
-}
+Treasure::Treasure():
+        Card("Treasure")
+{}
 
 
 

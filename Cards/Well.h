@@ -15,7 +15,7 @@ public:
     * @return
     *      A new instance of Well.
     */
-    Well()=default;
+    Well();
 
 
 
@@ -37,16 +37,6 @@ public:
     *      modification of the player if needed.
     */
     void applyEncounter(Player &player) const override;
-
-
-
-    /*
-    * Get the card type
-    *
-    * @return
-    *      the type of the card ("Well").
-    */
-    std::string getType() const override;
 
 
 

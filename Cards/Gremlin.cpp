@@ -4,37 +4,19 @@
 
 #include "Gremlin.h"
 
-std::string Gremlin::getType() const
-{
-    return "Gremlin";
-}
+#define GREMLIN_COINS 2
+#define GREMLIN_FORCE 5
+#define GREMLIN_DAMAGE 10
 
-
-
-int Gremlin::getForce() const
-{
-    return GREMLIN_FORCE;
-}
-
-
-
-int Gremlin::getCoins() const
-{
-    return GREMLIN_COINS;
-}
-
-
-
-int Gremlin::getDamage() const
-{
-    return GREMLIN_DAMAGE;
-}
+Gremlin::Gremlin():
+        BattleCard("Gremlin",GREMLIN_DAMAGE,GREMLIN_FORCE,GREMLIN_COINS)
+{}
 
 
 
 void Gremlin::handlePlayerLoss(Player &player) const
 {
-    player.damage(GREMLIN_DAMAGE);
+    player.damage(m_damage);
 }
 
 

@@ -49,7 +49,7 @@ public:
     * @return
     *      the job of the player ("Healer").
     */
-    std::string getJob() const override;
+    const std::string& getJob() const override;
 
 
 private:

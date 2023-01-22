@@ -3,11 +3,9 @@
 //
 
 #include "Well.h"
-
-std::string Well::getType() const
-{
-    return "Well";
-}
+Well::Well():
+        Card("Well")
+{}
 
 
 

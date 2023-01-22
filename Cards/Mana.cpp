@@ -3,13 +3,10 @@
 //
 
 #include "Mana.h"
+Mana::Mana():
+        Card("Mana")
+{}
 
-
-
-std::string Mana::getType() const
-{
-    return "Mana";
-}
 
 
 

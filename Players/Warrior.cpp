@@ -33,7 +33,7 @@ int Warrior::getAttackStrength() const
 
 
 
-std::string Warrior::getJob() const
+const std::string& Warrior::getJob() const
 {
     return m_job;
 }

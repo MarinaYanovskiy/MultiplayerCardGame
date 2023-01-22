@@ -1,5 +1,12 @@
 #include "Card.h"
 
+Card::Card(const std::string& name):
+m_name(name)
+{
+}
+
+
+
 Card::~Card()
 {}
 
@@ -7,7 +14,7 @@ Card::~Card()
 
 std::ostream &operator<<(std::ostream &stream, const Card &card)
 {
-    printCardDetails(stream, card.getType());
+    printCardDetails(stream,card.m_name);
     card.printAdditionalInfo(stream);
     printEndOfCardDetails(stream);
     return stream;

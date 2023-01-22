@@ -47,7 +47,7 @@ public:
     * @return
     *      the job of the player ("Warrior").
     */
-    std::string getJob() const override;
+    const std::string& getJob() const override;
 
 
 

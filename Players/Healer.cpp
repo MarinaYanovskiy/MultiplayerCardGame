@@ -34,7 +34,7 @@ void Healer::heal(int healPoints)
 
 
 
-std::string Healer::getJob() const
+const std::string& Healer::getJob() const
 {
     return m_job;
 }
